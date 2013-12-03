@@ -10,7 +10,7 @@ Description
 - The HTML template is writen in HTML, CSS and the  Jinja 2 Templating Language.
 
 
-Special thanks to:
+Special thanks to
 ==========
 - Appfog
 The PaaS platform on which our robot is hosted.
