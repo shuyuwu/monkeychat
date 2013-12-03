@@ -8,7 +8,7 @@ Description
 ==========
 - The code is writen in Python.
 - The HTML template is writen in HTML, CSS and the  Jinja 2 Templating Language.
-- The robot is tested locally by using weixin-simulator (https://github.com/ushuz/).
+- The robot is tested locally by using weixin-simulator.
 
 
 Special thanks to
