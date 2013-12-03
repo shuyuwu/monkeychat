@@ -1,0 +1,82 @@
+﻿<html lang="en">
+
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="/static/style.css" rel="stylesheet" type="text/css">
+<title>{{ doc.name }}</title>
+</head>
+
+<body>
+
+<!-- Header and description -->
+<p>
+<span class="header">{{ doc.name }}</span><br>
+<span class="title_level_2">{{ doc.desc }}</span>
+</p>
+
+<!-- Table: Attributes -->
+<p>
+<span class="title_level_1">Attributes</span>
+</p>
+<table style="width: 100%">
+{% for key in doc.attrs.keys() -%}
+<tr><td class="cell_bg_color_1"><span class="title_level_2">{{ key }}</span></td></tr>
+<tr><td class="cell_bg_color_2"><span class="text">{{ doc.attrs[key] }}</span></td></tr>
+{% endfor -%}
+</table>
+</br>
+
+<!-- Table: Abilities -->
+{% if doc.abils != None -%}
+<p>
+<span class="title_level_1">Abilities</span>
+</p>
+{% for abil in doc.abils -%}
+<table style="width: 100%">
+<tr>
+<td class="cell_bg_color_3"><img src="{{ abil.pict }}"></td>
+<td class="cell_bg_color_3" width="100%"><span class="title_level_1">{{ abil.name }}</span></br><span class="text">{{ abil.desc }}</span></td>
+</tr>
+</table>
+<table style="width: 100%">
+{% for key in abil.attr.keys() -%}
+<tr><td class="cell_bg_color_1"><span class="title_level_2">{{ key }}</span></td></tr>
+<tr><td class="cell_bg_color_2"><span class="text">{{ abil.attr[key] }}</span></td></tr>
+{% endfor -%}
+</table>
+</br>
+{% endfor -%}
+{% endif -%}
+
+<!-- Table: Upgrades -->
+{% if doc.upgds != None -%}
+<p>
+<span class="title_level_1">Upgrades</span>
+</p>
+{% for upgd in doc.upgds -%}
+<table style="width: 100%">
+<tr>
+<td class="cell_bg_color_3"><img src="{{ upgd.pict }}"></td>
+<td class="cell_bg_color_3" width="100%"><span class="title_level_1">{{ upgd.name }}</span></br><span class="text">{{ upgd.desc }}</span></td>
+</tr>
+</table>
+<table style="width: 100%">
+{% for key in upgd.attr.keys() -%}
+<tr><td class="cell_bg_color_1"><span class="title_level_2">{{ key }}</span></td></tr>
+<tr><td class="cell_bg_color_2"><span class="text">{{ upgd.attr[key] }}</span></td></tr>
+{% endfor -%}
+</table>
+</br>
+{% endfor -%}
+{% endif -%}
+
+<!-- Copyrights -->
+<p>
+<span class="copyright">Data adopted from
+<a href="http://wiki.teamliquid.net/starcraft2/Main_Page">Liquipedia</a>. 
+Pictures adopted from <a href="http://www.blizzard.com">Blizzard</a>.</span>
+</p>
+
+</body>
+
+</html>

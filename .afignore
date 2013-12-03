@@ -1,0 +1,6 @@
+# ignore sublime-text-2 project files
+monkeychat.sublime-project
+monkeychat.sublime-workspace
+
+# ignore .pyc files
+*.pyc
