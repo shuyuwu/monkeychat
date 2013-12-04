@@ -6,8 +6,8 @@ See http://www.wechat.com/ for more details.
 
 Description
 ==========
-- The code is writen in Python.
-- The HTML template is writen in HTML, CSS and the  Jinja 2 Templating Language.
+- The code is written in Python.
+- The HTML template is written in HTML, CSS and the Jinja 2 Templating Language.
 - The robot is tested locally by using weixin-simulator.
 
 
